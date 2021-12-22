@@ -17,5 +17,8 @@ module.exports = {
     addPets(_, { input }, ctx) {
       return ctx.model.Pets.create(input);
     },
+    addUser(_, { input }, ctx) {
+      return ctx.model.Users.create(input);
+    },
   },
 };

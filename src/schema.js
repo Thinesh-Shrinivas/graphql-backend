@@ -31,8 +31,13 @@ const typDef = gql`
     type: String!
   }
 
+  input UserInput {
+    name: String!
+  }
+
   type Mutation {
     addPets(input: PetInput): Pet!
+    addUser(input: UserInput): User!
   }
 `;
 module.exports = typDef;
