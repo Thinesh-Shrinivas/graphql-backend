@@ -16,7 +16,7 @@ const typDef = gql`
 
   type Query {
     me: User!
-    Pet: [Pet]!
+    petsReq: [Pet]!
   }
 `;
 module.exports = typDef;
