@@ -11,7 +11,7 @@ const typDef = gql`
   type User {
     name: String!
     id: Int!
-    number: Int!
+    number: Int
     address: String
   }
 
