@@ -25,9 +25,15 @@ const typDef = gql`
     serachBook(inputB: InputBook): [Book]!
   }
 
-  # type Mutation{
+  input InputTyped {
+    name: String
+    id: ID!
+    author: String
+  }
 
-  # }
+  type Mutation {
+    addInputTyped(input: InputTyped): Book!
+  }
 `;
 
 const resolver = {
@@ -52,6 +58,16 @@ const resolver = {
           author: "Thinesh",
         },
       ].filter((arr) => arr.id === inputB.id);
+    },
+  },
+  Mutation: {
+    addInputTyped(_, { input }) {
+      const obj = {
+        name: "Revenant of crucade",
+        id: 1,
+        author: "Thinesh",
+      };
+      return { obj, ...input };
     },
   },
 };
