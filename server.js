@@ -67,7 +67,7 @@ const resolver = {
         id: 1,
         author: "Thinesh",
       };
-      return { obj, ...input };
+      return { ...obj, ...input };
     },
   },
 };
