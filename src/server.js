@@ -14,4 +14,4 @@ const server = new ApolloServer({
   },
 });
 
-server.listen(4000).then((url) => console.log(`launched on ${url}`));
+server.listen(4000).then(({ url }) => console.log(`launched on ${url}`));
