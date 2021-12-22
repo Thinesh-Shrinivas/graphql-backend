@@ -7,4 +7,9 @@ module.exports = {
       return ctx.model.Pets.findMany();
     },
   },
+  Mutation: {
+    addPets(_, { input }, ctx) {
+      return ctx.model.Pets.create(input);
+    },
+  },
 };

@@ -4,5 +4,30 @@
     "id": "123456",
     "createdAt": 123566665433
   },
-  "pet": []
+  "pet": [
+    {
+      "id": "2kAM2C8AqwnmB10fKBbOJ",
+      "createdAt": 1640169614118,
+      "name": "bruno",
+      "type": "dog"
+    },
+    {
+      "id": "48Y2VnrQYefegFZkWcvxs",
+      "createdAt": 1640169621314,
+      "name": "jimmy",
+      "type": "dog"
+    },
+    {
+      "id": "xCPV0VcaUxlBFqiTVQ7No",
+      "createdAt": 1640169631863,
+      "name": "daizy",
+      "type": "cat"
+    },
+    {
+      "id": "sYC-BgHwyuYhkanTaAp-k",
+      "createdAt": 1640169642998,
+      "name": "leone",
+      "type": "cat"
+    }
+  ]
 }
