@@ -6,6 +6,12 @@ module.exports = {
     petsReq(_, __, ctx) {
       return ctx.model.Pets.findMany();
     },
+    reqPet(_, { input }, ctx) {
+      return ctx.model.Pets.findOne(input);
+    },
+    reqPets(_, { input }, ctx) {
+      return ctx.model.Pets.findMany(input);
+    },
   },
   Mutation: {
     addPets(_, { input }, ctx) {

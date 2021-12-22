@@ -14,9 +14,16 @@ const typDef = gql`
     type: String!
   }
 
+  input InputReqPet {
+    id: ID
+    type: String
+  }
+
   type Query {
     me: User!
     petsReq: [Pet]!
+    reqPets(input: InputReqPet): [Pet]!
+    reqPet(input: InputReqPet): Pet!
   }
 
   input PetInput {
