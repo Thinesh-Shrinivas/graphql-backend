@@ -4,4 +4,9 @@ module.exports = {
       return ctx.model.Users.findOne();
     },
   },
+  Mutation: {
+    addPet(_, { input }, ctx) {
+      return ctx.model.Pets.create(input);
+    },
+  },
 };
