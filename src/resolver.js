@@ -21,4 +21,14 @@ module.exports = {
       return ctx.model.Users.create(input);
     },
   },
+  Pet: {
+    owner(_, __, ctx) {
+      return ctx.model.Users.findOne();
+    },
+  },
+  User: {
+    pet(_, __, ctx) {
+      return ctx.model.Pets.findMany();
+    },
+  },
 };

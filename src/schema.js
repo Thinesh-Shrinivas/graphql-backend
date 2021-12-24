@@ -6,12 +6,15 @@ const typDef = gql`
     name: String!
     id: ID!
     createdAt: Float!
+    pet: [Pet]!
   }
+
   type Pet {
     id: ID!
     createdAt: Float!
     name: String!
     type: String!
+    owner: User!
   }
 
   input InputReqPet {
