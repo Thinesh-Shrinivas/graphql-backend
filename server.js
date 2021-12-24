@@ -39,8 +39,14 @@ const typDef = gql`
     joner: joners
   }
 
+  input UserData {
+    name: String
+    id: Int!
+  }
+
   type Mutation {
     addInputTyped(input: InputTyped): Book!
+    addUser(input: UserData): User!
   }
 `;
 
@@ -75,6 +81,15 @@ const resolver = {
         name: "Revenant of crucade",
         id: 1,
         author: "Thinesh",
+      };
+      return { ...obj, ...input };
+    },
+    addUser(_, { input }) {
+      const obj = {
+        name: "Dharma",
+        id: 6,
+        number: 998,
+        address: "East Street",
       };
       return { ...obj, ...input };
     },
