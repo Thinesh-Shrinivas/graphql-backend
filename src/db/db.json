@@ -9,25 +9,29 @@
       "id": "2kAM2C8AqwnmB10fKBbOJ",
       "createdAt": 1640169614118,
       "name": "bruno",
-      "type": "dog"
+      "type": "dog",
+      "indoor": true
     },
     {
       "id": "48Y2VnrQYefegFZkWcvxs",
       "createdAt": 1640169621314,
       "name": "jimmy",
-      "type": "dog"
+      "type": "dog",
+      "indoor": false
     },
     {
       "id": "xCPV0VcaUxlBFqiTVQ7No",
       "createdAt": 1640169631863,
       "name": "daizy",
-      "type": "cat"
+      "type": "cat",
+      "indoor": true
     },
     {
       "id": "sYC-BgHwyuYhkanTaAp-k",
       "createdAt": 1640169642998,
       "name": "leone",
-      "type": "cat"
+      "type": "cat",
+      "indoor": false
     }
   ]
 }

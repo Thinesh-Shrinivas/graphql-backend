@@ -2,16 +2,33 @@
 const { gql } = require("apollo-server");
 
 const typDef = gql`
+  interface Pet {
+    id: ID!
+    createdAt: Float!
+    name: String!
+    type: String!
+  }
+
   type User {
     name: String!
     id: ID!
     createdAt: Float!
   }
-  type Pet {
+
+  type Domestic implements Pet {
     id: ID!
     createdAt: Float!
     name: String!
     type: String!
+    indoor: Boolean
+  }
+
+  type NonDomestic implements Pet {
+    id: ID!
+    createdAt: Float!
+    name: String!
+    type: String!
+    indoor: Boolean
   }
 
   input InputReqPet {

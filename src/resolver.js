@@ -21,4 +21,10 @@ module.exports = {
       return ctx.model.Users.create(input);
     },
   },
+  Pet: {
+    __resolveType(value) {
+      if (value.indoor === true) return "Domestic";
+      return "NonDomestic";
+    },
+  },
 };
