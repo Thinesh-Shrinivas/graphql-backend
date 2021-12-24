@@ -1,11 +1,18 @@
 const { ApolloServer, gql } = require("apollo-server");
 
 const typDef = gql`
+  enum joners {
+    HORROR
+    ROMANTIC
+    COMIC
+    THRILLER
+  }
+
   type Book {
     name: String!
     id: Int!
     author: String!
-    joner: String
+    joner: joners
   }
 
   type User {
@@ -29,6 +36,7 @@ const typDef = gql`
     name: String
     id: ID!
     author: String
+    joner: joners
   }
 
   type Mutation {
@@ -43,6 +51,7 @@ const resolver = {
         name: "Revenant of crucade",
         id: 1,
         author: "Thinesh",
+        joner: "THRILLER",
       };
     },
     serachBook(_, { inputB }) {
